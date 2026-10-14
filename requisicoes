@@ -1,0 +1,280 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1764769685260
+  modified: 1764769685260
+  description: ""
+collection:
+  - name: requisiçoes de testes
+    meta:
+      id: fld_c2095bc53cd24c1391489c373c11e54e
+      created: 1790123597291
+      modified: 1790123597291
+      sortKey: -1790123597291
+      description: ""
+    children:
+      - url: localhost:3000/
+        name: Teste API
+        meta:
+          id: req_0b7bffe362234f058559356e3ed8e82f
+          created: 1788302256555
+          modified: 1790124608778
+          isPrivate: false
+          description: ""
+          sortKey: -1790123708018
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/test
+        name: Teste conexão banco
+        meta:
+          id: req_542813820bd34be0aab3c4fd4d9209cb
+          created: 1788303349206
+          modified: 1790125271442
+          isPrivate: false
+          description: ""
+          sortKey: -1790123707818
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/test/tables
+        name: Teste listar tabelas banco
+        meta:
+          id: req_d20fb999d0104b8dbff6428ec6e1fdaf
+          created: 1788908475528
+          modified: 1790123874325
+          isPrivate: false
+          description: ""
+          sortKey: -1790123707918
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: genero
+    meta:
+      id: fld_476e033743f44663acf67b9e09477b21
+      created: 1790123703170
+      modified: 1791932193789
+      sortKey: -1790123703170
+      description: ""
+    children:
+      - url: localhost:3000/generos
+        name: Cria genero
+        meta:
+          id: req_8e190d1b4f344a77964fa1765b9be33a
+          created: 1790124690648
+          modified: 1791933505871
+          isPrivate: false
+          description: ""
+          sortKey: -1790124690648
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "nome": "Ação"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/generos
+        name: Lista todos generos
+        meta:
+          id: req_61d9e31eb03844ccbd429fff9f983694
+          created: 1791931806774
+          modified: 1791937131862
+          isPrivate: false
+          description: ""
+          sortKey: -1790124690748
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Filmes
+    meta:
+      id: fld_b53adfbd30434844af4ff10e74ba0375
+      created: 1791933247788
+      modified: 1791933251045
+      sortKey: -1791933247788
+      description: ""
+    children:
+      - url: ""
+        name: Lista todos os filmes
+        meta:
+          id: req_552c9eee33bd4d6288e49a134d37de77
+          created: 1791933258918
+          modified: 1791937129637
+          isPrivate: false
+          description: ""
+          sortKey: -1791933259119
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/filmes
+        name: Cria filmes
+        meta:
+          id: req_d6c77faa662c47e9bc7f2d39b3a276aa
+          created: 1791933275735
+          modified: 1791936959383
+          isPrivate: false
+          description: ""
+          sortKey: -1791933259019
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"título": "Hora do Rush",
+            	"diretorId": "1",
+            	"generos": [
+            		1
+            	]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Diretores
+    meta:
+      id: fld_b9facaef7e394975aaef67078cfc6227
+      created: 1791936968911
+      modified: 1791936978697
+      sortKey: -1791936968911
+      description: ""
+    children:
+      - url: localhost:3000/diretor
+        name: Cria diretores
+        meta:
+          id: req_e673e2c1ab934d658cf1daab4d832ef7
+          created: 1791936974039
+          modified: 1791939916963
+          isPrivate: false
+          description: ""
+          sortKey: -1791936993182
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "nome": "Brett Ratner"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/diretor
+        name: Lista todos os diretores
+        meta:
+          id: req_dcf80fe82f8b4c59b12bbea59243f071
+          created: 1791936993082
+          modified: 1791938254045
+          isPrivate: false
+          description: ""
+          sortKey: -1791936993282
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1791931728995
+    modified: 1791931728995
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1791931728993
+    modified: 1791931728993
+    isPrivate: false
