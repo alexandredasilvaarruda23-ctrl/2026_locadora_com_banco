@@ -7,23 +7,23 @@ meta:
   modified: 1764769685260
   description: ""
 collection:
-  - name: requisiçoes de testes
+  - name: Testes
     meta:
-      id: fld_c2095bc53cd24c1391489c373c11e54e
-      created: 1790123597291
-      modified: 1790123597291
-      sortKey: -1790123597291
+      id: fld_57c4f4bd99bb44ceb85b70fe586c25df
+      created: 1790123529404
+      modified: 1790123632496
+      sortKey: -1790123529404
       description: ""
     children:
       - url: localhost:3000/
         name: Teste API
         meta:
-          id: req_0b7bffe362234f058559356e3ed8e82f
+          id: req_634a56a9bcc643ee935da76650538c33
           created: 1788302256555
-          modified: 1790124608778
+          modified: 1790123758391
           isPrivate: false
           description: ""
-          sortKey: -1790123708018
+          sortKey: -1790123532800
         method: GET
         headers:
           - name: User-Agent
@@ -41,12 +41,12 @@ collection:
       - url: localhost:3000/test
         name: Teste conexão banco
         meta:
-          id: req_542813820bd34be0aab3c4fd4d9209cb
+          id: req_6825c5c147e54496a2144cd0455e1e93
           created: 1788303349206
-          modified: 1790125271442
+          modified: 1790123641535
           isPrivate: false
           description: ""
-          sortKey: -1790123707818
+          sortKey: -1790123532750
         method: GET
         headers:
           - name: User-Agent
@@ -64,12 +64,12 @@ collection:
       - url: localhost:3000/test/tables
         name: Teste listar tabelas banco
         meta:
-          id: req_d20fb999d0104b8dbff6428ec6e1fdaf
+          id: req_ea5bf1778ca846ea9854d498b7d85841
           created: 1788908475528
-          modified: 1790123874325
+          modified: 1790123537297
           isPrivate: false
           description: ""
-          sortKey: -1790123707918
+          sortKey: -1790123532700
         method: GET
         headers:
           - name: User-Agent
@@ -84,29 +84,29 @@ collection:
             send: true
             store: true
           rebuildPath: true
-  - name: genero
+  - name: Generos
     meta:
-      id: fld_476e033743f44663acf67b9e09477b21
-      created: 1790123703170
-      modified: 1791932193789
-      sortKey: -1790123703170
+      id: fld_1611ae8ba53b43468852dfc7cb6b3a83
+      created: 1790123573941
+      modified: 1790123579876
+      sortKey: -1788302256255
       description: ""
     children:
       - url: localhost:3000/generos
         name: Cria genero
         meta:
-          id: req_8e190d1b4f344a77964fa1765b9be33a
-          created: 1790124690648
-          modified: 1791933505871
+          id: req_c10633f256ae462b86804ee2bc5c1cf4
+          created: 1790123486658
+          modified: 1793141520294
           isPrivate: false
           description: ""
-          sortKey: -1790124690648
+          sortKey: -1790123714780
         method: POST
         body:
           mimeType: application/json
           text: |-
             {
-            "nome": "Ação"
+            	"nome": "Comédia"
             }
         headers:
           - name: Content-Type
@@ -122,12 +122,12 @@ collection:
       - url: localhost:3000/generos
         name: Lista todos generos
         meta:
-          id: req_61d9e31eb03844ccbd429fff9f983694
-          created: 1791931806774
-          modified: 1791937131862
+          id: req_f4aa3f08a6424dbeaf3d839828800eb1
+          created: 1791931804513
+          modified: 1791931855689
           isPrivate: false
           description: ""
-          sortKey: -1790124690748
+          sortKey: -1790123623790
         method: GET
         settings:
           renderRequestBody: true
@@ -139,27 +139,35 @@ collection:
           rebuildPath: true
   - name: Filmes
     meta:
-      id: fld_b53adfbd30434844af4ff10e74ba0375
-      created: 1791933247788
-      modified: 1791933251045
-      sortKey: -1791933247788
+      id: fld_e66c29693ec54c8bb4025ba4389de55c
+      created: 1791933216967
+      modified: 1791933216967
+      sortKey: -1788302256205
       description: ""
     children:
-      - url: ""
-        name: Lista todos os filmes
+      - url: localhost:3000/filmes
+        name: Cria filme
         meta:
-          id: req_552c9eee33bd4d6288e49a134d37de77
-          created: 1791933258918
-          modified: 1791937129637
+          id: req_09f266f9d95e435a86d4a4b4445a479e
+          created: 1791933216967
+          modified: 1793143040617
           isPrivate: false
           description: ""
-          sortKey: -1791933259119
-        method: GET
+          sortKey: -1790123714780
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"titulo": "hora do rush",
+            	"diretorId": 1,
+            	"generos": [
+            		1, 2
+            	]
+            }
         headers:
-          - name: User-Agent
-            value: insomnia/12.1.0
-            description: ""
-            disabled: false
+          - name: Content-Type
+            value: application/json
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -169,30 +177,54 @@ collection:
             store: true
           rebuildPath: true
       - url: localhost:3000/filmes
-        name: Cria filmes
+        name: Lista todos filmes
         meta:
-          id: req_d6c77faa662c47e9bc7f2d39b3a276aa
-          created: 1791933275735
-          modified: 1791936959383
+          id: req_e59cc0b8b0b341a8a9d105d27972d064
+          created: 1791933216967
+          modified: 1793147924289
           isPrivate: false
           description: ""
-          sortKey: -1791933259019
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            	"título": "Hora do Rush",
-            	"diretorId": "1",
-            	"generos": [
-            		1
-            	]
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.1.0
+          sortKey: -1790123623790
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/filmes/11
+        name: Lista filme por id
+        meta:
+          id: req_5318a81fb9e44a4f86dc736ffd827f0f
+          created: 1793146798878
+          modified: 1793147962221
+          isPrivate: false
+          description: ""
+          sortKey: -1790123578295
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/filmes/search
+        name: Lista filmes por filtro
+        meta:
+          id: req_8ff576aa833e485583a2ddf460c672bc
+          created: 1793150498964
+          modified: 1793150611239
+          isPrivate: false
+          description: ""
+          sortKey: -1790123555547.5
+        method: GET
+        parameters:
+          - name: titulo
+            value: hor
             description: ""
             disabled: false
         settings:
@@ -205,35 +237,22 @@ collection:
           rebuildPath: true
   - name: Diretores
     meta:
-      id: fld_b9facaef7e394975aaef67078cfc6227
-      created: 1791936968911
-      modified: 1791936978697
-      sortKey: -1791936968911
+      id: fld_0232bf042fe340c1a0fccff63d20840d
+      created: 1791939723102
+      modified: 1791939723102
+      sortKey: -1788302256230
       description: ""
     children:
-      - url: localhost:3000/diretor
-        name: Cria diretores
+      - url: localhost:3000/diretores
+        name: Lista todos diretores
         meta:
-          id: req_e673e2c1ab934d658cf1daab4d832ef7
-          created: 1791936974039
-          modified: 1791939916963
+          id: req_662a478e7df5449096fb6f0a00965bb0
+          created: 1791939723102
+          modified: 1791939826132
           isPrivate: false
           description: ""
-          sortKey: -1791936993182
-        method: POST
-        body:
-          mimeType: application/json
-          text: |-
-            {
-            "nome": "Brett Ratner"
-            }
-        headers:
-          - name: Content-Type
-            value: application/json
-          - name: User-Agent
-            value: insomnia/12.1.0
-            description: ""
-            disabled: false
+          sortKey: -1790123623790
+        method: GET
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -242,21 +261,25 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:3000/diretor
-        name: Lista todos os diretores
+      - url: localhost:3000/diretores
+        name: Cria diretor
         meta:
-          id: req_dcf80fe82f8b4c59b12bbea59243f071
-          created: 1791936993082
-          modified: 1791938254045
+          id: req_b7416e4052a144bf8209a767b3b3e035
+          created: 1791939723102
+          modified: 1791939787065
           isPrivate: false
           description: ""
-          sortKey: -1791936993282
-        method: GET
+          sortKey: -1790123714780
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Brett Ratner"
+            }
         headers:
-          - name: User-Agent
-            value: insomnia/12.1.0
-            description: ""
-            disabled: false
+          - name: Content-Type
+            value: application/json
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -269,12 +292,12 @@ cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1791931728995
-    modified: 1791931728995
+    created: 1793140930751
+    modified: 1793140930751
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1791931728993
-    modified: 1791931728993
+    created: 1793140930749
+    modified: 1793140930749
     isPrivate: false

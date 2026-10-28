@@ -1,23 +1,24 @@
 {
-  "name": "2026_locadora_com_banco",
+  "name": "2026-2sem-itapevi-ds3n-crud-locadora-com-banco",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "up-db": "knex migrate:latest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandredasilvaarruda23-ctrl/2026_locadora_com_banco.git"
+    "url": "git+https://github.com/Joao-Meyer/2026-2sem-itapevi-ds3n-crud-locadora-com-banco.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/alexandredasilvaarruda23-ctrl/2026_locadora_com_banco/issues"
+    "url": "https://github.com/Joao-Meyer/2026-2sem-itapevi-ds3n-crud-locadora-com-banco/issues"
   },
-  "homepage": "https://github.com/alexandredasilvaarruda23-ctrl/2026_locadora_com_banco#readme",
+  "homepage": "https://github.com/Joao-Meyer/2026-2sem-itapevi-ds3n-crud-locadora-com-banco#readme",
   "dependencies": {
     "express": "5.2.1",
     "knex": "3.3.0",
